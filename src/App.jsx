@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ArrowDown, ArrowRight, Award, Building2, Check, ChevronDown, Factory,
   FlaskConical, HardHat, Menu, Mountain, Shield, ShoppingCart, Star,
@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 
 const features = [
-  { icon: Mountain, title: 'Добыча полезных ископаемых', desc: 'Современные технологии разработки месторождений с соблюдением экологических стандартов и требований б��зопасности.' },
+  { icon: Mountain, title: 'Добыча полезных ископаемых', desc: 'Современные технологии разработки месторождений с соблюдением экологических стандартов и требований безопасности.' },
   { icon: Building2, title: 'Строительство', desc: 'Полный цикл строительных работ: от проектирования до сдачи объектов под ключ — промышленных и гражданских.' },
   { icon: Factory, title: 'Производство материалов', desc: 'Собственное производство строительных материалов: бетон, железобетонные изделия, щебень и песок.' },
   { icon: FlaskConical, title: 'Химическая продукция', desc: 'Качественные химические составы для промышленности и строительства с контролем и сертификацией.' },
@@ -26,7 +26,7 @@ const testimonials = [
 const plans = [
   { name: 'Базовый', monthly: '50 000', yearly: '45 000', desc: 'Для небольших проектов и стартапов', features: ['Поставка материалов', 'Консультация специалиста', 'Стандартная логистика', 'Договорная поддержка'] },
   { name: 'Про', monthly: '150 000', yearly: '128 000', desc: 'Оптимально для растущего бизнеса', popular: true, features: ['Всё из тарифа «Базовый»', 'Приоритетные поставки', 'Технический супервайзинг', 'Гибкие условия оплаты', 'Персональный менеджер'] },
-  { name: 'Энтерпрайз', monthly: 'Индивидуально', yearly: 'Индивидуально', desc: 'Для крупн��х инфраструктурных проектов', custom: true, features: ['Всё из тарифа «Про»', 'Выделенная команда', 'Индивидуальное производство', 'Финансирование проектов', 'Поддержка 24/7'] },
+  { name: 'Энтерпрайз', monthly: 'Индивидуально', yearly: 'Индивидуально', desc: 'Для крупных инфраструктурных проектов', custom: true, features: ['Всё из тарифа «Про»', 'Выделенная команда', 'Индивидуальное производство', 'Финансирование проектов', 'Поддержка 24/7'] },
 ];
 const faqs = [
   { q: 'Какие регионы обслуживает компания?', a: 'Основная деятельность сосредоточена в Кыргызстане. Возможны поставки в соседние страны Центральной Азии; логистика согласуется под проект.' },
@@ -128,7 +128,7 @@ export default function App() {
           <div className="feature-grid">{features.map(({ icon: Icon, title, desc }, index) => <article className="feature-card" key={title}><div className="feature-top"><span className="icon-box"><Icon size={23} /></span><span className="card-index">0{index + 1}</span></div><h3>{title}</h3><p>{desc}</p><a href="#contact" aria-label={`Подробнее: ${title}`} className="card-arrow"><ArrowRight size={18} /></a></article>)}</div>
         </div></section>
 
-        <section className="process-section section" id="process"><div className="container"><SectionHeading eyebrow="ПОНЯТНЫЙ ПРОЦЕСС" title="От з��дачи к результату">Работаем прозрачно: вы знаете, что происходит с проектом и какой следующий шаг.</SectionHeading>
+        <section className="process-section section" id="process"><div className="container"><SectionHeading eyebrow="ПОНЯТНЫЙ ПРОЦЕСС" title="От задачи к результату">Работаем прозрачно: вы знаете, что происходит с проектом и какой следующий шаг.</SectionHeading>
           <div className="steps-grid">{steps.map(({ icon: Icon, title, desc }, index) => <article className="step-card" key={title}><div className="step-number">0{index + 1}</div><span className="step-icon"><Icon size={25} /></span><h3>{title}</h3><p>{desc}</p>{index < steps.length - 1 && <span className="step-connector"><ArrowRight size={17} /></span>}</article>)}</div>
         </div></section>
 
